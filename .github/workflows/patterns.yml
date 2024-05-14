@@ -15,7 +15,8 @@ jobs:
       - name: Combine all patterns into a single file
         uses: mikefarah/yq@master
         with:
-          cmd: yq '.' patterns/*.yaml > patterns.yaml
+          # cmd: yq '.' patterns/*.yaml > patterns.yaml
+          cmd: yq '.' patterns/*.yaml | yq ea '[.]' -o=json > patterns.json
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload Artifact
