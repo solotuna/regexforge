@@ -1,0 +1,7 @@
+version: 1
+
+name: US Address
+description: This regex matches a basic US street address format with a building number, street name, city, and ZIP code
+pattern: >
+  ^(\d{1,}) [a-zA-Z0-9\s]+(\,)? [a-zA-Z]+(\,)? [A-Z]{2} [0-9]{5,6}$
+author: uibakery
