@@ -1,7 +1,6 @@
 name: Combine files from the patterns folder into a single file and deploy to the GitHub Pages
 
-on: 
-  workflow_dispatch:
+on: push
 
 jobs:
   build:
