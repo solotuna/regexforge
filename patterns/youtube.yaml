@@ -1,0 +1,59 @@
+version: 1
+
+name: YouTube URL Matcher
+description: Comprehensive pattern to match various YouTube URL formats, including video, channel, user, and search result links
+pattern: >
+  ^(?:https?:\/\/)?(?:(?:(?:www\.?)?youtube\.com(?:\/(?:(?:watch\?.*?(v=[^&\s]+).*)|(?:v(\/.*))|(channel\/.+)|(?:user\/(.+))|(?:results\?(search_query=.+))))?)|(?:youtu\.be(\/.*)?))$
+text: >
+  video complex
+  https://www.youtube.com/watch?feature=something&v=videoid1&embed=something
+  http://www.youtube.com/watch?feature=something&v=videoid2&embed=something
+  www.youtube.com/watch?feature=something&v=videoid3&embed=something
+  youtube.com/watch?feature=something&v=videoid4&embed=something
+
+  video
+  https://www.youtube.com/watch?v=videoid1
+  http://www.youtube.com/watch?v=videoid2
+  www.youtube.com/watch?v=videoid3
+  youtube.com/watch?v=videoid4
+
+  other video
+  https://www.youtube.com/v/videoid1
+  http://www.youtube.com/v/videoid2
+  www.youtube.com/v/videoid3
+  youtube.com/v/videoid4
+
+  channel
+  https://www.youtube.com/channel/channelid1
+  http://www.youtube.com/channel/channelid2
+  www.youtube.com/channel/channelid3
+  youtube.com/channel/channelid4
+
+  user
+  https://www.youtube.com/user/username1
+  http://www.youtube.com/user/username2
+  www.youtube.com/user/username3
+  youtube.com/user/username4
+
+  search
+  https://www.youtube.com/results?search_query=search+query1
+  http://www.youtube.com/results?search_query=search+query2
+  www.youtube.com/results?search_query=search+query3
+  youtube.com/results?search_query=search+query4
+
+  Youtu.be video
+  https://youtu.be/videoid1
+  http://youtu.be/videoid2
+  youtu.be/videoid3
+
+  normal youtube link
+  https://www.youtube.com
+  http://www.youtube.com
+  www.youtube.com
+  youtube.com
+
+  Youtu.be link
+  https://youtu.be
+  http://youtu.be
+  youtu.be
+author: deme72
