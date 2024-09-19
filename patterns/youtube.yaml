@@ -4,7 +4,7 @@ name: YouTube URL Matcher
 description: Comprehensive pattern to match various YouTube URL formats, including video, channel, user, and search result links
 pattern: >
   ^(?:https?:\/\/)?(?:(?:(?:www\.?)?youtube\.com(?:\/(?:(?:watch\?.*?(v=[^&\s]+).*)|(?:v(\/.*))|(channel\/.+)|(?:user\/(.+))|(?:results\?(search_query=.+))))?)|(?:youtu\.be(\/.*)?))$
-text: >
+text: |
   video complex
   https://www.youtube.com/watch?feature=something&v=videoid1&embed=something
   http://www.youtube.com/watch?feature=something&v=videoid2&embed=something
