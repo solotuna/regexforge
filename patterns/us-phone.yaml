@@ -1,0 +1,14 @@
+version: 1
+
+name: US Phone Number
+description: This regular expression pattern is designed to match US phone numbers in various common formats.
+pattern: >
+  ^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$
+text: |
+  (123) 456-7890
+  (123)456-7890
+  123-456-7890
+  123.456.7890
+  123 456 7890
+  1234567890
+author: claude
