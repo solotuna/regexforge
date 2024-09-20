@@ -1,9 +1,29 @@
 version: 1
 
 name: IPv4 Address
-description: Fast pattern to match IPv4 address
+description: This regular expression pattern is designed to match valid IPv4 addresses.
 pattern: >
-  ^((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)\.?\b){4}$
-author: sylido
+  ^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$
+text: |
+  Valid addresses:
+  192.168.0.1
+  10.0.0.0
+  172.16.0.1
+  255.255.255.255
+  0.0.0.0
+  1.2.3.4
+
+  Invalid addresses:
+  256.1.2.3 (octet exceeds 255)
+  1.2.3.4.5 (too many octets)
+  192.168.01.1 (leading zero)
+  192.168.1 (too few octets)
+  192.168.1.01 (leading zero)
+  192.168.1.256 (octet exceeds 255)
+  192.168.1.2.3 (too many octets)
+  a.b.c.d (non-numeric characters)
+  123,45.67.89 (invalid separator)
+  192.168.1. (incomplete address)
+author: claude
 
 
