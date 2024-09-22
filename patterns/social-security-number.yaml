@@ -1,0 +1,39 @@
+version: 1
+
+name: Social Security Number
+description: A regex pattern to validate U.S. Social Security Numbers (SSNs) in the format XXX-XX-XXXX, with various rules for valid number ranges.
+pattern: >
+  ^(?!000|666|9\d{2})\d{3}-(?!00)\d{2}-(?!0000)\d{4}$
+text: |
+  Valid SSNs:
+  Standard valid SSN
+  123-45-6789
+  Another valid SSN
+  987-65-4321
+  Valid SSN with leading zeros
+  001-02-0003
+
+  Invalid SSNs:
+  Area number cannot be 000
+  000-12-3456
+  Area number cannot be 666
+  666-12-3456
+  Area number cannot start with 9
+  900-12-3456
+  Group number cannot be 00
+  123-00-4567
+  Serial number cannot be 0000
+  123-45-0000
+  Missing hyphens
+  123456789
+  Too short
+  123-45-678
+  Too long
+  123-45-67890
+  Contains non-numeric characters
+  12A-34-5678
+  Uses spaces instead of hyphens
+  123 45 6789
+author: claude
+
+
