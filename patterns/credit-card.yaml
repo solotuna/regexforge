@@ -1,0 +1,29 @@
+version: 1
+
+name: Credit Card
+description: This pattern matches the most common credit card number formats, including Visa, MasterCard, American Express, and Discover.
+pattern: >
+  ^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|6(?:011|5[0-9]{2})[0-9]{12})$
+text: |
+  Valid card numbers:
+
+  4111111111111111 (Visa)
+  4012888888881881 (Visa)
+  5555555555554444 (MasterCard)
+  5105105105105100 (MasterCard)
+  378282246310005 (American Express)
+  371449635398431 (American Express)
+  6011111111111117 (Discover)
+  6011000990139424 (Discover)
+
+  Invalid card numbers:
+
+  411111111111111 (too short for Visa)
+  5555555555554445555 (too long for MasterCard)
+  37828224631000 (too short for American Express)
+  6011111111111118 (invalid checksum for Discover)
+  1234567890123456 (doesn't match any pattern)
+  ABCDEFGHIJKLMNOP (contains non-numeric characters)
+author: claude
+
+
