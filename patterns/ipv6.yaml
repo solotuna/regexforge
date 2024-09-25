@@ -13,10 +13,14 @@ text: |
 
   Invalid IPv6 addresses:
 
-  2001:0db8:85a3:0000:0000:8a2e:0370:7334:1234 (too many groups)
-  2001:0db8:85a3:0000:0000:8a2e:0370 (too few groups)
-  2001:0db8:85a3:0000:0000:8a2e:0370:xxxx (invalid characters)
-  192.168.0.1 (IPv4 format)
+  Too many grups
+  2001:0db8:85a3:0000:0000:8a2e:0370:7334:1234
+  Too few groups
+  2001:0db8:85a3:0000:0000:8a2e:0370
+  Invalid characters
+  2001:0db8:85a3:0000:0000:8a2e:0370:xxxx
+  IPv4 format
+  192.168.0.1
 author: claude
 
 
