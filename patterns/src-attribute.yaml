@@ -1,0 +1,16 @@
+version: 1
+
+name: IMG Tag SRC Attribute Content Extractor
+description: This regular expression pattern extracts the content of the 'src' attribute specifically from HTML 'img' tags. 
+pattern: >
+  (?<=src\s?=\s?["'])(?:(?!["']).)*(?=['"])
+text: |
+  <img src="https://example.com/image.jpg" alt="Example Image">
+  <img width="300" height="200" src='/images/photo.png'>
+  <img class="thumbnail" src = "data:image/jpeg;base64,/9j/4AAQSkZJRg...">
+  <div>This is not an image tag</div>
+  <a href="https://example.com"><img src="path/to/image.gif" loading="lazy"></a>
+  <input type="image" src="button.png">
+author: claude
+
+
