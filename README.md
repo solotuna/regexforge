@@ -34,11 +34,11 @@ Want to add a new pattern? Follow these steps:
 - Create a new YAML file inside the patterns/ directory.
 - Use the format shown above, ensuring your pattern includes:
   - version: Format version (always 1 for now).
-	-	name: A short, descriptive name for your pattern.
-	-	description: A brief explanation of what the pattern does.
-	-	pattern: The regular expression itself.
-	-	text: Example input data showcasing valid and invalid matches.
-	-	author: Your name or GitHub handle (optional).
+  - name: A short, descriptive name for your pattern.
+  - description: A brief explanation of what the pattern does.
+  - pattern: The regular expression itself.
+  - text: Example input data showcasing valid and invalid matches.
+  - author: Your name or GitHub handle (optional).
 - Submit a pull request, and after review, your pattern will be added!
 
 ## Licence
